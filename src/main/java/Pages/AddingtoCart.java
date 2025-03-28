@@ -27,7 +27,7 @@ public class AddingtoCart {
     }
 
     public void addToCart() {
-        // Multiple strategies to find and click Add to Cart
+       
         By[] addToCartLocators = {
             By.xpath("//a[contains(text(),'Add to cart')]"),
             By.xpath("//a[text()='Add to cart']"),
@@ -38,11 +38,11 @@ public class AddingtoCart {
             try {
                 WebElement addButton = wait.until(ExpectedConditions.elementToBeClickable(locator));
                 
-                // Try regular click first
+            
                 try {
                     addButton.click();
                 } catch (Exception e) {
-                    // Fallback to JavaScript click
+                    
                     js.executeScript("arguments[0].click();", addButton);
                 }
 
@@ -51,13 +51,12 @@ public class AddingtoCart {
                 driver.switchTo().alert().accept();
                 return;
             } catch (Exception e) {
-                // Continue to next locator if current one fails
+                
                 continue;
             }
         }
 
-        // If all methods fail, throw exception
-        throw new RuntimeException("Could not find Add to Cart button");
+       Cart button");
     }
 
     public int getCartItemCount() {
