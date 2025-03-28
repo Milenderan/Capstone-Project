@@ -33,12 +33,12 @@ public class PurchaseTest extends BaseTest {
 
         // Fill purchase form
         purchasePage.fillPurchaseForm(
-            "John Doe",      // Name
-            "United States", // Country
-            "New York",      // City
-            "1234567890",    // Card Number
-            "12",            // Month
-            "2025"           // Year
+            "John Doe",      
+            "United States", 
+            "New York",      
+            "1234567890",    
+            "12",            
+            "2025"           
         );
 
         // Click purchase button
