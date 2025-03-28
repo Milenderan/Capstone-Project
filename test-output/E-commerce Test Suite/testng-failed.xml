@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [E-commerce Test Suite]">
+  <test thread-count="5" name="Checkout Test(failed)">
+    <classes>
+      <class name="tests.CheckoutTest">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="testCheckoutProcess"/>
+          <include name="initializeDriver"/>
+        </methods>
+      </class> <!-- tests.CheckoutTest -->
+    </classes>
+  </test> <!-- Checkout Test(failed) -->
+</suite> <!-- Failed suite [E-commerce Test Suite] -->

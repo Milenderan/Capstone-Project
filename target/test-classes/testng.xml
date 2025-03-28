@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="E-commerce Test Suite">
+
+    <test name="Signup Test">
+        <classes>
+            <class name="tests.SignupTest"/>
+        </classes>
+        </test>
+        
+         <test name="LoginTest Test">
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+        
+        <test name="HomePage Test">
+        <classes>
+            <class name="tests.HomePageTest"/>
+        </classes>
+    </test>
+    
+    <test name="Cart Test">
+        <classes>
+            <class name="tests.CartTest"/>
+        </classes>
+    </test>
+    
+    <test name="Product Test">
+        <classes>
+            <class name="tests.ProductTest"/>
+        </classes>
+    </test>
+    
+    <test name="Checkout Test">
+        <classes>
+            <class name="tests.CheckoutTest"/>
+        </classes>
+    </test>
+    
+</suite>
