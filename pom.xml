@@ -4,14 +4,6 @@
   <artifactId>Capstoneproject1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <dependencies>
-  	<dependency>
-  		<groupId>org.test1</groupId>
-  		<artifactId>Day21</artifactId>
-  		<version>0.0.1-SNAPSHOT</version>
-  	</dependency>
-  	
-  	
-  	 
     
     <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
