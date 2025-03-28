@@ -61,7 +61,7 @@ public class HomePage extends BaseTest {
     // Check if all menu items are present
     public boolean areAllMenuItemsPresent() {
         try {
-            // Wait for the navbar to be visible (corrected ID)
+      
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("navbarExample")));
             
             // Check for each expected menu item with more flexible selectors
@@ -72,7 +72,7 @@ public class HomePage extends BaseTest {
             boolean loginPresent = isElementPresent(By.id("login2"));
             boolean signupPresent = isElementPresent(By.id("signin2"));
             
-            // Print status of each menu item for debugging
+           
             System.out.println("Menu Items Check Results:");
             System.out.println("Home: " + homePresent);
             System.out.println("Contact: " + contactPresent);
@@ -91,7 +91,7 @@ public class HomePage extends BaseTest {
         }
     }
 
-    // Helper method to check if an element is present
+   
     private boolean isElementPresent(By locator) {
         try {
             WebElement element = driver.findElement(locator);
@@ -106,30 +106,30 @@ public class HomePage extends BaseTest {
         }
     }
 
-    // Check if all product categories are listed
+  
     public boolean areAllCategoriesListed() {
         try {
             wait.until(ExpectedConditions.visibilityOf(categoriesContainer));
             
-            // The category links are inside a div with id="contcont" and specifically within the category area
+          
             List<WebElement> categoryElements = driver.findElements(By.cssSelector("#contcont .list-group a"));
             
             String[] expectedCategories = {"CATEGORIES", "Phones", "Laptops", "Monitors"};
             
-            // If we don't have enough category elements, return false immediately
+          
             if (categoryElements.size() < expectedCategories.length) {
                 System.out.println("Not enough category elements found. Expected: " + expectedCategories.length + 
                                   ", Found: " + categoryElements.size());
                 return false;
             }
             
-            // Print what we found for debugging
+           
             System.out.println("Category Elements Found: " + categoryElements.size());
             for (WebElement element : categoryElements) {
                 System.out.println("Category: " + element.getText());
             }
             
-            // Check if each expected category is found
+            
             for (String expected : expectedCategories) {
                 boolean found = false;
                 for (WebElement element : categoryElements) {
